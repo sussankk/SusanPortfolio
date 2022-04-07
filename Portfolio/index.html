@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Susan's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
 
@@ -14,22 +16,33 @@
     <div class="navbar navbar-expand-lg bg-light navbar-light">
         <div class="container-fluid">
             <a href="index.html" class="navbar-brand">Susan Koko</a>
-            <!-- <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button> -->
+            
 
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav ml-auto">
-                    <a href="#home" class="nav-item nav-link active">Home</a>
+                    <a href="#home" class="nav-item nav-link">Home</a>
                     <a href="#about" class="nav-item nav-link ">About</a>
                     <a href="#contact" class="nav-item nav-link ">Contact</a>
-                    <a href="#gallery" class="nav-item nav-link ">Gallery</a>
+                    <a href="#blog" class="nav-item nav-link ">Blog</a>
                     <a href="#project" class="nav-item nav-link ">Projects</a>
                     
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="dropdown">
+        <button class="dropbtn" style="color: white;">Susan Koko <div class="menuicon"> <i onclick="toggleMenu()" class="fa fa-bars" aria-hidden="true"></i></div></button>
+        <div class="dropdown-content" id="menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#blog">Blog</a>
+            <a href="#project">Project</a>
+    
+    
+        </div>
+      </div>
 
 
     <div class="pagecontainer" id="home">
@@ -54,38 +67,50 @@
     </div>
 
     <div class="pagecontainer" id="about">
+
+         
+
+
+
         <div class="column" >
-            <div> 
+            <div class="abtimg"> 
                 <img src="images/officeimg.jpg" width="700"/>
             </div>
         </div>
 
-        <div class="column">
+
+        
+
+        <div class="column desktop-view" id="col" >
+            
             <h4>Learn About Me</h4>
             <h1>Lorem ipsum dolor sit amet.</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus veritatis ipsam, reprehenderit voluptatum illum magni incidunt vero consequuntur voluptates aspernatur.</p>
-            <div>
+
+            <br/>
+            <br/>
+            <div class="bar">
                 <p class="skill-name"><span>CSS</span> <span style="float: right;">60%</span></p>
                 <div id="progressbar" >
                     <div style="width: 60%;"></div>
                 </div>
             </div>
 
-            <div>
+            <div class="bar">
                 <p class="skill-name"><span>JAVA</span> <span style="float: right;">20%</span></p>
                 <div id="progressbar" >
                     <div style="width: 20%;"></div>
                 </div>
             </div>
 
-            <div>
+            <div class="bar">
                 <p class="skill-name"><span>HTML</span> <span style="float: right;">80%</span></p>
                 <div id="progressbar" >
                     <div style="width: 80%;"></div>
                 </div>
             </div>
 
-            <div>
+            <div class="bar">
                 <p class="skill-name"><span>PYTHON</span> <span style="float: right;">40%</span></p>
                 <div id="progressbar" >
                     <div style="width: 40%;"></div>
@@ -96,15 +121,268 @@
     </div>
 
     <div class="pagecontainer" id="contact">
-      <h1>hello</h1>
+            <h1 style="text-align: center; font-family:Raleway, sans-serif; padding-top: 18px;">Contact Me</h1>
+            <br>
+
+
+            <form action="mailto:susankoko3@gmail.com" method="post" enctype="text/plain">
+            <div class="contact">
+                <div>
+                    <label for="fullname"> Fullname: </label><br>
+                    <input type="text" name="fullname" id="fullname" placeholder="John Doe">
+                </div>
+                <div>
+                    <label for="email"> Email: </label><br>
+                    <input type="email" name="email" id="email" placeholder="johndoe@example.com">
+                </div>
+                <div>
+                    <label for="subject">Subject: </label><br>
+                    <textarea id="subject" name="subject" placeholder="Write something..." style="height: 200px; width: 100%;" ></textarea>
+                </div>
+            
+                <div class="submit">
+                    <input type="submit" value="Send Message" id="submit">
+                </div>
+            </div>
+            </form>
+
+            
+
     </div>
 
-    <div class="pagecontainer" id="gallery">
-      <h1>hello</h1>
+    <div class="pagecontainer" id="blog">
+        <h1 style="text-align: center; font-family:Raleway, sans-serif; padding-top: 18px;">Latest Tech News</h1>
+
+
+
+        <div class="slide-container">
+            <div class="slide">
+
+              <div class="card">
+                <img src="images/amazon.png" alt="amazon logo" style="width:20%">
+                <h1>Jeff Bezos to fly to space</h1>
+                <p>The Amazon founder Jeff Bezos has said he will fly to space</p>
+                <button><a href="https://www.bbc.com/news/world-us-canada-57386049">Read More</a></button>
+              </div>
+
+                
+
+            </div>
+            
+            
+            <div class="slide">
+
+              <div class="card">
+                <img src="images/microsoft.png" alt="microsoft logo" style="width:25%">
+                <h1>AI News</h1>
+                <p>Microsoft reveals plans to bring GPT-3</p>
+                <button><a href="https://www.wired.com/story/ai-write-code-ordinary-language/">Read More</a></button>
+              </div>
+
+
+
+            </div>
+            
+            
+            <div class="slide">
+
+
+              <div class="card">
+                <img src="images/Apple-logo.png" alt="apple logo" style="width:15%">
+                <h1>15in MacBook Air</h1>
+                <p>Potential 15in MacBook Air is in the works</p>
+                <button><a href="https://www.wired.com/story/ai-write-code-ordinary-language/">Read More</a></button>
+              </div>
+
+
+                
+
+            </div>    
+          
+          
+          </div>
+
+        
+
+
+
+        <div class="blogcontainer">
+
+        <section>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img  class="blogimg" src="images/blog1.jpg" alt="satya nadella" width="300px" height="400px">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>AI Could Soon Write Code Based on Ordinary Language</h1>
+                    <p>Microsoft reveals plans to bring GPT-3, best known for generating text, to programming. “The code writes itself,” CEO Satya Nadella says. </p>
+                    <button><a href="https://www.wired.com/story/ai-write-code-ordinary-language/">Read More</a></button>
+
+                  </div>
+                </div>
+              </div>
+              
+          </section>
+          
+    
+          <section>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img class="blogimg" src="images/blog5.jpg" alt="jeff bezos" width="300px" height="400px">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Jeff Bezos and brother to fly to space in July</h1>
+                    <p>The Amazon founder Jeff Bezos has said he will fly to space with his brother on the first human flight launched by his space company, Blue Origin.</p>
+                    <button><a href="https://www.bbc.com/news/world-us-canada-57386049">Read More</a></button>
+
+                  </div>
+                </div>
+              </div>
+              
+        </section>
+    
+        <section>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img class="blogimg" src="images/blog6.jpg" alt="steve jobs" width="300px" height="400px">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Apple considered making a 15in MacBook Air</h1>
+                    <p>Old emails have appeared online outlining the possibility of a 15in MacBook Air</p>
+                    <button><a href="https://www.macworld.co.uk/news/apple-considered-15in-macbook-air-3805218/">Read More</a></button>
+
+                  </div>
+                </div>
+              </div>
+
+        </div>
+              
+        </section>
+      
     </div>
 
     <div class="pagecontainer" id="project">
-      <h1>hello</h1>
+    <h1 style="text-align: center; font-family:Raleway, sans-serif; padding-top: 18px;">Projects</h1>
+
+
+
+
+
+    <div class="slide-container">
+      <div class="slide">
+
+        <div class="card">
+          <img src="images/htmllogo.png" alt="html logo" style="width:20%">
+          <h1>HTML,CSS and Javascript</h1>
+          <p>Simple Portfolio Website</p>
+          <button><a href="https://github.com/sussankk/SusanPortfolio">View Project</a></button>
+        </div>
+
+          
+
+      </div>
+      
+      
+      <div class="slide">
+
+        <div class="card">
+          <img src="images/csharplogo.png" alt="c sharp logo" style="width:30%">
+          <h1>C# PROJECT</h1>
+          <p class="mt-2">Simple Calculator Application</p>
+          <button><a href="https://github.com/sussankk/Csharpconsoleproject">View Project</a></button>
+        </div>
+
+
+
+      </div>
+      
+      
+      <div class="slide">
+
+
+        <div class="card">
+          <img src="images/javalogo.png" alt="jave logo" style="width:20%">
+          <h1>JAVA PROJECT</h1>
+          <p class="mt-2">Hospital Desktop Application</p>
+          <button><a href="https://github.com/sussankk/basicsofjavaproject">View Project</a></button>
+        </div>
+
+
+          
+
+      </div>    
+      </div>
+    
+
+
+    <div class="projectcontainer">
+
+        
+      <section>
+        <div class="card">
+            <img src="images/htmllogo.png" alt="html logo" style="width:20%">
+            <h1>HTML,CSS and Javascript</h1>
+            <p>Simple Portfolio Website</p>
+            <button><a href="https://github.com/sussankk/SusanPortfolio">View Project</a></button>
+          </div>
+      </section>
+      
+
+      <section>
+        <div class="card">
+            <img src="images/csharplogo.png" alt="c sharp logo" style="width:30%">
+            <h1>C# PROJECT</h1>
+            <p class="mt-2">Simple Calculator Application</p>
+            <button><a href="https://github.com/sussankk/Csharpconsoleproject">View Project</a></button>
+          </div>
+    </section>
+
+    <section>
+        <div class="card">
+            <img src="images/javalogo.png" alt="jave logo" style="width:20%">
+            <h1>JAVA PROJECT</h1>
+            <p class="mt-2">Hospital Desktop Application</p>
+            <button><a href="https://github.com/sussankk/basicsofjavaproject">View Project</a></button>
+          </div>
+    </section>
+</div>
     </div>
+
+    <div class="footer">
+
+        <div class= "footertext">	
+            <h1> Susan Koko</h1>
+            <h4> 123 Street, Accra, Ghana</h4>
+            <p> susank@gmail.com</p>
+
+
+        </div>
+
+        <br>
+        <br>
+
+        
+		
+		<a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+
+        <br>
+        <br>
+
+        <div class= "footertext">	
+            <p>© Susan's Portfolio, All Right Reserved <span class="design-tag">| Designed By Susan Koko</span></p>
+        </div>
+
+	
+
+
+
+	</div>
+    
+    <script src="js/main.js"></script>
   </body>
 </html>
